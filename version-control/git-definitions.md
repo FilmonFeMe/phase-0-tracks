@@ -17,3 +17,4 @@
 * **What is a merge conflict?**
 
      A merge conflict is that when two branches modify the same section of a code or part of a file. 
+     
