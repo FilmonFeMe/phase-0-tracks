@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Table</title>
+		<style>
+		#table1{
+		table-layout: fixed;
+		border-width: 1.0em 15px 15px;
+		margin: 60px 0 0 10vw;
+		border-style: solid;
+		border-color: rgb(255, 255, 255);
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+		.top-left{
+		color:black;
+		padding: 5px;
+		width: 330;
+		border-right: 1px solid black;
+		border-top: 3px solid black;
+		border-bottom: 2px solid black;
+		
+		}
+		.top-center{
+		color:black;
+		padding: 5px;
+		border-left: 1px solid black;
+		border-right: 1px solid black;
+		border-top: 3px solid black;
+		border-bottom: 2px solid black;
+		width: 330;
+		
+		}
+		.top-right{
+		color:black;
+		padding: 5px;
+		border-top: 3px solid black;
+		border-left: 1px solid black;
+		border-bottom: 2px solid black;
+		width: 330;
+		
+		}
+		td{
+			width:20vw;
+			text-align: center;
+		}
+		tr.rows td  {
+		/*background-color:white;*/
+		border:1px solid #000;
+		text-align: center;
+		font-weight: bold;
+		color: #990000;
+		font-size: 1em;
+		text-decoration:none;
+		
+		}
+		tr.rows:nth-child(even) td{
+		
+		background-color: #f1f1f1;
+		
+		}
+		tr.rows:nth-child(odd) td{
+		background-color: #D4F7EB;
+		
+		}
+		
+		</style>
+	</head>
+	<body>
+		<table id="table1">
+			<tbody>
+				<tr>
+					<th class="title-sub" colspan="3" >English Premier League standings (2016/17)</th>
+				</tr>
+				<tr>
+					<th class="top-left"> Team</th>
+					<th class="top-center"> Games Played</th>
+					<th class="top-right"> Points</th>
+				</tr>
+				<tr class="rows">
+					
+					<td colspan="1"><strong>Chelsea</strong> </td>
+					
+					<td colspan="1"><strong>38</strong>
+					</td>
+					<td colspan="1"><strong>93</strong>
+					</td>
+					
+				</tr>
+				<tr class="rows">
+					<td colspan="1"><strong>Tottenham Hotspur</strong>
+					</td>
+					
+					<td colspan="1"><strong>38</strong> </td>
+					
+					<td colspan="1"><strong>86</strong>
+					</td>
+					
+				</tr>
+				<tr class="rows">
+					<td colspan="1"><strong>Manchester City</strong>
+					</td>
+					
+					<td colspan="1"><strong>38</strong> </td>
+					
+					<td colspan="1"><strong>78</strong>
+					</td>
+					
+				</tr>
+				<tr class="rows">
+					<td colspan="1"><strong>Liverpool</strong>
+					</td>
+					
+					<td colspan="1"><strong>38</strong> </td>
+					
+					<td colspan="1"><strong>76</strong>
+					</td>
+					
+				</tr>
+				<tr >
+					<td colspan="3" ><strong>List of the teams at the bottom</strong>
+					</td>
+					
+				</tr>
+				
+				<tr class="rows">
+					<td colspan="1" rowspan="3" ><strong>Bottom clubs</strong>
+					</td>
+					<td ><strong>Watford</strong> </td>
+					<td ><strong>MBurnley</strong> </td>
+					
+				</tr>
+				<tr class="rows">
+					
+					<td ><strong>Hull</strong> </td>
+					<td ><strong>Middlesbrough</strong> </td>
+					
+				</tr>
+				<tr class="rows">
+					
+					<td ><strong>Sunderland</strong> </td>
+					<td><strong>&nbsp;</strong> </td>
+					
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
