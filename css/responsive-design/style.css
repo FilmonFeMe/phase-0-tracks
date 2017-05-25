@@ -38,3 +38,38 @@ figcaption {
 font-style: italic;
 text-align: right;
 }
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+
+  #external-links{
+     display:inline !important;
+    padding: 10px;
+  }
+  #link-list  {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+}
+
+  #link-list li {
+    display:inline !important;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  h1{
+    font-size: .9em;
+  }
+  p{
+    font-size: .9em;
+  }
+  a{
+    font-size: .9em;
+  }
+  li {
+    font-size: .9em;
+  }
+
+}
