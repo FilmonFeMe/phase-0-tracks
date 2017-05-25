@@ -1,39 +1,40 @@
 body{
-  max-width:960px;
+width:960px;
 }
 main{
-  max-width:756px;
+display:inline-block;
+vertical-align: top;
+width:756px;
+}
+#external-links{
+display:inline-block;
+vertical-align: top;
+max-width: 200px;
 }
 blockquote {
-  border-left: 5px solid blue;
-  padding: 15px;
-  margin-left: 0px;
+border-left: 5px solid blue;
+padding: 15px;
+margin-left: 0px;
 }
-
 cite {
-  display: block;
-  margin-top: 10px;
+display: block;
+margin-top: 10px;
 }
-
 #external-links ul {
-  list-style-type: none;
-  padding-left: 0px;
-  max-width: 200px;
+list-style-type: none;
+padding-left: 0px;
 }
-
 /* you're welcome to edit the
-image, figure, and figcaption CSS if you'd like, 
+image, figure, and figcaption CSS if you'd like,
 but it's optional! */
 img {
-  width: 100%;
+width: 100%;
 }
-
 figure {
-  margin-left: 0px;
-  margin-right: 0px;
+margin-left: 0px;
+margin-right: 0px;
 }
-
 figcaption {
-  font-style: italic;
-  text-align: right;
+font-style: italic;
+text-align: right;
 }
