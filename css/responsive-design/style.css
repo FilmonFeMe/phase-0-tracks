@@ -1,32 +1,75 @@
+body{
+max-width:960px;
+}
+main{
+display:inline-block;
+vertical-align: top;
+max-width:75%;
+}
+#external-links{
+display:inline-block;
+vertical-align: top;
+max-width: 20%;
+}
 blockquote {
-  border-left: 5px solid blue;
-  padding: 15px;
-  margin-left: 0px;
+border-left: 5px solid blue;
+padding: 15px;
+margin-left: 0px;
 }
-
 cite {
-  display: block;
-  margin-top: 10px;
+display: block;
+margin-top: 10px;
 }
-
 #external-links ul {
-  list-style-type: none;
-  padding-left: 0px;
+list-style-type: none;
+padding-left: 0px;
 }
-
 /* you're welcome to edit the
-image, figure, and figcaption CSS if you'd like, 
+image, figure, and figcaption CSS if you'd like,
 but it's optional! */
 img {
-  width: 100%;
+width: 100%;
 }
-
 figure {
-  margin-left: 0px;
-  margin-right: 0px;
+margin-left: 0px;
+margin-right: 0px;
+}
+figcaption {
+font-style: italic;
+text-align: right;
+}
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+
+  #external-links{
+     display:inline !important;
+    padding: 10px;
+  }
+  #link-list  {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
 }
 
-figcaption {
-  font-style: italic;
-  text-align: right;
+  #link-list li {
+    display:inline !important;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  h1{
+    font-size: .9em;
+  }
+  p{
+    font-size: .9em;
+  }
+  a{
+    font-size: .9em;
+  }
+  li {
+    font-size: .9em;
+  }
+
 }
