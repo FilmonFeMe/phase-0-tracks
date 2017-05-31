@@ -31,7 +31,9 @@ def encrypt(word)
   end
   return new_word
 end
-
+puts "Test encrypt method"
+puts encrypt("abc")
+puts encrypt("zed")
 puts encrypt("ab cdz")
 
 
@@ -50,5 +52,7 @@ def decrypt (word)
   end
   return new_word
 end
-
+puts "Test decrypt method"
+puts decrypt("bcd")
+puts decrypt("afe")
 puts decrypt("ab cdz")
