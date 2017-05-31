@@ -33,3 +33,22 @@ def encrypt(word)
 end
 
 puts encrypt("ab cdz")
+
+
+def decrypt (word)
+	alphabets="abcdefghijklmnopqrstuvwxyz"
+  i=0
+  new_word= ""
+  while i< word.length
+    if word[i]==" "
+      new_word +=word[i]
+      i +=1
+    else
+      new_word +=alphabets[alphabets.index(word[i])-1]
+      i +=1
+    end
+  end
+  return new_word
+end
+
+puts decrypt("ab cdz")
