@@ -58,5 +58,8 @@ puts decrypt("afe")
 puts decrypt("ab cdz")
 
 #Nested Method Call
+#This method works because the encrypt method is called and encrypts the word, which
+#then returns the encrypted word. This is then passed as an input argument to the decrypt method.
+# The decrypt method decrypts the word and returns the original string.
 puts "Nested method call result"
 puts decrypt(encrypt("swordfish"))
