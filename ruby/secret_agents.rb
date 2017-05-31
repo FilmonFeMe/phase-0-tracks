@@ -25,11 +25,11 @@ def encrypt(word)
       new_word +=word[i]
       i +=1
     else
-      new_word +=word[i].next
+      new_word +=word[i].next[0]
       i +=1
     end
   end
   return new_word
 end
 
-puts encrypt("ab cd")
+puts encrypt("ab cdz")
