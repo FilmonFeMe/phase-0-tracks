@@ -56,3 +56,7 @@ puts "Test decrypt method"
 puts decrypt("bcd")
 puts decrypt("afe")
 puts decrypt("ab cdz")
+
+#Nested Method Call
+puts "Nested method call result"
+puts decrypt(encrypt("swordfish"))
