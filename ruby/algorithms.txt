@@ -1,0 +1,15 @@
+Release 0: Algorithm for Using an Elevator
+1. Check current floor
+2. If current floor is greater than desired floor
+	-press down arrow on the side of the elevator entry and wait until the elevator reaches the current floor
+If current position is less than desired position
+	-press up arrow on the side of the elevator entry and wait until the elevator reaches the current floor
+Otherwise 
+	-Do nothing and you are on the desired floor
+3. When the elevator reaches the current floor and the door opens automatically
+	-go inside the elevator completely so that the door can close behind you
+4. Turn around until you face the door
+5. Look for the elevator button panel either side of the elevator side, (walk closer to it if necessary)
+6. Start from bottom of the buttons and go upwards looking for the destination floor number you want and press the button
+7. Wait until the elevator reaches the destination floor and the door opens automatically
+8. Walk out of the elevator to exit.
