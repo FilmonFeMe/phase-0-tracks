@@ -1,0 +1,45 @@
+Release 0: Algorithm for Using an Elevator
+1. Check current floor
+2. If current floor is greater than desired floor
+	-press down arrow on the side of the elevator entry and wait until the elevator reaches the current floor
+If current position is less than desired position
+	-press up arrow on the side of the elevator entry and wait until the elevator reaches the current floor
+Otherwise 
+	-Do nothing and you are on the desired floor
+3. When the elevator reaches the current floor and the door opens automatically
+	-go inside the elevator completely so that the door can close behind you
+4. Turn around until you face the door
+5. Look for the elevator button panel either side of the elevator side, (walk closer to it if necessary)
+6. Start from bottom of the buttons and go upwards looking for the destination floor number you want and press the button
+7. Wait until the elevator reaches the destination floor and the door opens automatically
+8. Walk out of the elevator to exit.
+
+
+Release 1:Shopping Pseudocode 
+1. Prepare shopping list on a piece of paper while at home
+2. Grab recyclable bags
+3. Go to your car
+4. Set your destination GPS to the shopping mall you want to visit
+5. Start engine and drive following your GPS direction
+6. When destination is reached, park your car in an empty and allowed parking lot as close as possible to the shopping mall
+7. Grab your recyclable bag and get out of your car
+8. Close your car door behind you and lock your car
+9. Walk towards the shopping mall
+10. Get a shopping cart from near the entry door to the left
+11. Push the cart towards the entry door
+12. After the automatic door opens, enter the shopping mall
+13. Until your shopping list is exhausted 
+	-grab everything in the desired quantity and place them on the shopping cart
+14. Go to the cashier
+15. Place all the items from the shopping cart to the platform
+16. Wait until the casher scans the items
+17. Make payment
+18. Put the items inside the bags
+19. Exit the shopping mall 
+20. Walk to your car
+21. Open the door and load your items in the car
+22. Repeat steps 4 and 5 to your house
+23. stop engine and grab your stuff
+24. Lock your car
+25. Go inside your house
+26. Place all items in the right place
