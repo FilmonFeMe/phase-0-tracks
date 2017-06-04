@@ -28,3 +28,21 @@ if input_health=="yes"
 else
   order_health=false
 end
+#Check whether user is a vampire or not
+if age==(2017-year_born) && (order_garlic==true || order_health==true)
+  result= "Probably not a vampire."
+end
+if age !=(2017-year_born) && (order_garlic==false || order_health==false)
+  result= "Probably a vampire."
+end
+if age !=(2017-year_born) && (order_garlic==false && order_health==false)
+  result= "Almost certainly a vampire"
+end
+if name_answer  =="Drake Cula" || name_answer  =="Tu Fang"
+  result= "Definitely a vampire"
+end
+if age==(2017-year_born) && (order_garlic==true && order_health==true) && (name_answer  !="Drake Cula" && name_answer  !="Tu Fang")
+  result= "Results inconclusive"
+end
+puts "The data collected shows that: "
+puts result
