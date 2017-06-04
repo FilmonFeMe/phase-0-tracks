@@ -32,21 +32,32 @@ while i<= employee_number
   else
     order_health=false
   end
+  puts "Type any allergy you have."
+  input_allergy=gets.chomp
+  while input_allergy != "done" && input_allergy != "sunshine"
+    puts "Type any allergy you have."
+    input_allergy=gets.chomp
+  end
   #Check whether user is a vampire or not
-  if age==(2017-year_born) && (order_garlic==true || order_health==true)
-    result= "Probably not a vampire."
+  if input_allergy !="sunshine"
+    if age==(2017-year_born) && (order_garlic==true || order_health==true)
+      result= "Probably not a vampire."
+    end
+  elsif input_allergy =="sunshine"
+    if age !=(2017-year_born) && (order_garlic==false || order_health==false)
+      result= "Probably a vampire."
+    end
   end
-  if age !=(2017-year_born) && (order_garlic==false || order_health==false)
-    result= "Probably a vampire."
-  end
-  if age !=(2017-year_born) && (order_garlic==false && order_health==false)
-    result= "Almost certainly a vampire"
-  end
-  if name_answer  =="Drake Cula" || name_answer  =="Tu Fang"
-    result= "Definitely a vampire"
-  end
-  if age==(2017-year_born) && (order_garlic==true && order_health==true) && (name_answer  !="Drake Cula" && name_answer  !="Tu Fang")
-    result= "Results inconclusive"
+  if input_allergy !="sunshine"
+    if age !=(2017-year_born) && (order_garlic==false && order_health==false)
+      result= "Almost certainly a vampire"
+    end
+    if name_answer  =="Drake Cula" || name_answer  =="Tu Fang"
+      result= "Definitely a vampire"
+    end
+    if age==(2017-year_born) && (order_garlic==true && order_health==true) && (name_answer  !="Drake Cula" && name_answer  !="Tu Fang")
+      result= "Results inconclusive"
+    end
   end
   puts "The data collected shows that: "
   puts result
