@@ -61,3 +61,5 @@ while i<= employee_number
   puts result
   i +=1
 end
+#Add final comment
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
