@@ -39,16 +39,14 @@ while i<= employee_number
     input_allergy=gets.chomp
   end
   #Check whether user is a vampire or not
-  if input_allergy !="sunshine"
     if age==(2017-year_born) && (order_garlic==true || order_health==true)
       result= "Probably not a vampire."
     end
-  elsif input_allergy =="sunshine"
+  if input_allergy =="sunshine"
     if age !=(2017-year_born) && (order_garlic==false || order_health==false)
       result= "Probably a vampire."
     end
-  end
-  if input_allergy !="sunshine"
+  else
     if age !=(2017-year_born) && (order_garlic==false && order_health==false)
       result= "Almost certainly a vampire"
     end
