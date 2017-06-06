@@ -79,7 +79,29 @@ p numbers_to_words
 
 #Use keep_if method
 
+number_array=[1,2,3,4,5,6,7,8,9,10]
+puts "The original array is:"
+p number_array
 
+puts "Result after iteration of array is:"
+
+p number_array.keep_if{|num| num<5}
+
+puts "The original array after call of the method is:"
+p number_array
+
+
+
+numbers_to_words={1=>"one",2=>"two",3=>"three",4=>"four",5=>"five",6=>"six",7=>"seven",8=>"eight",9=>"nine",10=>"ten"}
+puts "The original hash is:"
+p numbers_to_words
+
+puts "Result after iteration of hash is:"
+
+p numbers_to_words.keep_if{|num,word| num<5}
+
+puts "The original hash after call of the method is:"
+p numbers_to_words
 
 
 
