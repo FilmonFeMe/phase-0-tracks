@@ -130,7 +130,30 @@ puts "The original hash after call of the method is:"
 p numbers_to_words
 
 
+#Use take_while method
+number_array=[1,3,5,7,9,10,11,13]
+puts "The original array is:"
+p number_array
 
+puts "Result after iteration of array is:"
+
+p number_array.take_while{|num| num.odd?}
+
+puts "The original array after call of the method is:"
+p number_array
+
+
+
+numbers_to_words={1=>"one",2=>"two",3=>"three",4=>"four",5=>"five",6=>"six",7=>"seven",8=>"eight",9=>"nine",10=>"ten"}
+puts "The original hash is:"
+p numbers_to_words
+
+puts "Result after iteration of hash is:"
+
+p numbers_to_words.take_while{|num,word| num < 5}
+
+puts "The original hash after call of the method is:"
+p numbers_to_words
 
 
 
