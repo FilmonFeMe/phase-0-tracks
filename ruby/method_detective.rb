@@ -34,6 +34,7 @@
 # => "he mystery of the missing first letter"
 
 "Elementary,    my   dear        Watson! ".gsub(/\s+/," ").strip #.strip is used to remove white spaces at the beginning or end of the string(not useful for this particular string)
+"Elementary,    my   dear        Watson! ".split.join(" ")
 # => "Elementary, my dear Watson!"
 
 "z".ord
