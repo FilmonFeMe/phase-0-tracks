@@ -90,3 +90,39 @@ def fake_name(real_name)
   #concatenate name
   fake_last_name + " " + fake_first_name
 end
+
+# Driver code
+#==========
+def driver_code
+  puts "Enter full name (you can hit Enter to continue or type 'quit / q / QUIT / Q' to exit when done). "
+  entered_name = gets.chomp
+  full_name = Hash.new
+
+  triger_quit = entered_name.downcase == "quit" || entered_name.downcase == "q"
+
+  while  !triger_quit && !entered_name.empty? && entered_name != " "
+    real_name = entered_name
+    fake_name = fake_name(real_name)
+    full_name[real_name] =  fake_name
+
+    puts " "
+    puts "Again enter full name (you can hit Enter to continue or type 'quit' to exit when done)."
+    entered_name = gets.chomp
+    triger_quit = entered_name.downcase == "quit" || entered_name.downcase == "q"
+  end
+
+  full_name
+end
+
+def display(full_name)
+  puts " "
+  puts "Display stored data"
+  puts "======================="
+  full_name.map { |real_name, fake_name| puts "#{real_name} is also known as #{fake_name}." }
+end
+
+#call driver code
+full_name = driver_code
+
+#call display results
+display(full_name)
