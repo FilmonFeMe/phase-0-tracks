@@ -22,3 +22,26 @@ def next_vowel (vowel)
 
   next_vowel
 end
+
+#convert a consonant to the next consonant
+def next_consonant (consonant)
+  consonants  = "bcdfghjklmnpqrstvwxyz"
+  consonant_downcase = consonant.downcase
+
+  if consonants.include? consonant_downcase
+    index = consonants.index(consonant_downcase)
+
+    # handle edge case for letter 'z'
+    if consonant_downcase == "z"
+      next_consonant = consonants[0]
+    else
+      next_consonant = consonants[index + 1]
+    end
+    #check if the letter is upper case
+    if consonant == consonant.upcase
+      next_consonant = next_consonant.upcase
+    end
+  end
+
+  next_consonant
+end
