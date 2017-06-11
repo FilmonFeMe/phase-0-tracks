@@ -64,3 +64,11 @@ def encrypt_word(word)
 
   fake_name
 end
+
+#Swap first and last name
+def swap_name(real_name)
+  swapped_name = real_name.split(/ /).reverse #split and swap first name and last name
+  last_name = swapped_name[0].chars
+  first_name = swapped_name[1].chars
+  swapped_name = [last_name, first_name] #split characters of the first and last names
+end
