@@ -30,3 +30,28 @@ countries = {
 						liked_weather: true,
 					}
 }
+
+#Visited continent countries
+continent = countries.select {|country, country_info| country_info[:continent] == "Europe"}
+puts "The following are visited countries in Europe: #{continent.keys.join(", ")}"
+
+#The most visited country is
+number_cities_visited = []
+
+countries.each do |country, country_info| 
+	number_cities_visited << [country, country_info[:cities_visited].count]
+end
+
+least_visited, most_visited = number_cities_visited.minmax_by { |country| country.last }
+
+puts "The single country with the highest number of cities visited is #{most_visited.first} and the visited cities are #{most_visited.last} in number."
+puts "The single country with the lowest number of cities visited is #{least_visited.first} and the visited cities are #{least_visited.last} in number."
+
+#Population count
+population = []
+countries.map do |country, country_info| 
+	population << country_info.fetch(:population)
+end
+
+total_population = population.reduce(:+) 
+puts "The total population of the countries is #{total_population}"
