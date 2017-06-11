@@ -10,3 +10,15 @@
   #4. Combine first name and last name
 #Repeat steps 1-4  for the next real name entered
 # Display real name and corresponding fake name for the entire data entered
+
+#convert a vowel to the next vowel
+def next_vowel (vowel)
+  vowel_downcase = vowel.downcase
+
+  next_vowel = vowel_downcase.gsub(/[aeiou]/, 'a' => 'e', 'e' => 'i',' i' => 'o', 'o' => 'u', 'u' => 'a')
+  if vowel == vowel.upcase
+      next_vowel = next_vowel.upcase
+  end
+
+  next_vowel
+end
