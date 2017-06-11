@@ -45,3 +45,22 @@ def next_consonant (consonant)
 
   next_consonant
 end
+
+#Encrypting method
+def encrypt_word(word)
+  vowels = "aeiou"
+  consonants  = "bcdfghjklmnpqrstvwxyz"
+  fake_name = ""
+  #change each char to the next char
+  word.each do |char|
+    if vowels.include? char.downcase
+      fake_name << next_vowel(char)
+    elsif   consonants.include? char.downcase
+      fake_name << next_consonant(char)
+    else
+      fake_name << char
+    end
+  end
+
+  fake_name
+end
