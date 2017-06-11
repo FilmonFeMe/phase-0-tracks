@@ -72,3 +72,21 @@ def swap_name(real_name)
   first_name = swapped_name[1].chars
   swapped_name = [last_name, first_name] #split characters of the first and last names
 end
+
+#main method to fake a name
+#Assumptions
+#1. no special characters are expected as input
+#2. user expected to enter first name and last name separated by space
+def fake_name(real_name)
+  #call swap name to swap first and last names
+  swapped_name = swap_name( real_name)
+  last_name = swapped_name[0]
+  first_name = swapped_name[1]
+
+  #call encrypting method
+  fake_last_name = encrypt_word(last_name)
+  fake_first_name = encrypt_word(first_name)
+
+  #concatenate name
+  fake_last_name + " " + fake_first_name
+end
