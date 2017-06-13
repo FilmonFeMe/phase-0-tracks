@@ -94,10 +94,6 @@ def trigger_quit(entered_name)
   entered_name.downcase == "quit" || entered_name.downcase == "q"
 end
 
-#Validate data
-def input_data_valid?(entered_name)
-  !entered_name.empty? && entered_name != " "
-end
 # Driver code
 #==========
 def driver_code
@@ -107,10 +103,14 @@ def driver_code
   loop do
     puts "Enter full name (you can hit Enter to continue or type 'quit / q / QUIT / Q' to exit when done). "
     entered_name = gets.chomp
-    break if !input_data_valid?(entered_name) || trigger_quit(entered_name)
-    real_name = entered_name
-    fake_name = fake_name(real_name)
-    full_name[real_name] =  fake_name
+    break if  trigger_quit(entered_name)
+    begin
+      real_name = entered_name
+      fake_name = fake_name(real_name)
+      full_name[real_name] =  fake_name
+    rescue
+      puts "\nInvalid input.\n"
+    end
   end
 
   full_name
