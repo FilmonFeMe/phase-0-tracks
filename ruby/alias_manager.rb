@@ -12,7 +12,7 @@
 #Display real name and corresponding fake name for the entire data entered
 
 #Global constant variable
-Consonants  = "bcdfghjklmnpqrstvwxyz"
+CONSONANTS  = "bcdfghjklmnpqrstvwxyz" 
 #convert a vowel to the next vowel
 def next_vowel (vowel)
   vowel_downcase = vowel.downcase
@@ -24,13 +24,13 @@ end
 #convert a consonant to the next consonant
 def next_consonant (consonant)
   consonant_downcase = consonant.downcase
-  index = Consonants.index(consonant_downcase)
+  index = CONSONANTS.index(consonant_downcase)
 
   # handle edge case for letter 'z'
   if consonant_downcase == "z"
-    next_consonant = Consonants[0]
+    next_consonant = CONSONANTS[0]
   else
-    next_consonant = Consonants[index + 1]
+    next_consonant = CONSONANTS[index + 1]
   end
   #Capitalize next letter  if the original letter is upper case
   next_consonant = capitalize(consonant, next_consonant)
@@ -53,7 +53,7 @@ def encrypt_word(word)
   word.each do |char|
     if vowels.include? char.downcase
       fake_name << next_vowel(char)
-    elsif   Consonants.include? char.downcase
+    elsif   CONSONANTS.include? char.downcase
       fake_name << next_consonant(char)
     else
       fake_name << char
