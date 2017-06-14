@@ -19,13 +19,13 @@
 # input: list, item name
 # steps: 
 	# DELETE key-value pair from the list
-# output: boolean
+# output: hash
 
 # Method to update the quantity of an item
 # input: list, item name, new quantity
 # steps:
 	# SET the value of the specific item name equal to the item quantity
-# output: boolean
+# output: hash
 
 # Method to print a list and make it look pretty
 # input: list
@@ -38,7 +38,7 @@ grocery_list = { } # initialize list
 def create_list( grocery_list, items)
 	item_array = items.split(" ")
 	item_array.each { |item| grocery_list[item] = 1}
-	display_items(grocery_list)
+	# display_items(grocery_list)
 
 	grocery_list
 end
@@ -47,12 +47,20 @@ end
 # create_list(grocery_list, items)
 # p grocery_list
 
-def add_item(grocery_list, item_name, quantity = 1)
-	grocery_list[item_name] = quantity
-end
+# def add_item(grocery_list, item_name, quantity = 1)
+# 	grocery_list[item_name] = quantity
+# end
 
 # item_name = "apple"
 # quantity = 5
 # p grocery_list
 # add_item(grocery_list, item_name, quantity)
+# p grocery_list
+
+def remove_item(grocery_list, item_name)
+	grocery_list.delete(item_name)
+end
+
+# remove_item(grocery_list, "apple")
+
 # p grocery_list
