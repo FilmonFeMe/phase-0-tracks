@@ -1,4 +1,7 @@
 class Puppy
+  def initialize
+    puts "Initializing new puppy instance."
+  end
 
   def fetch(toy)
     puts "I brought back the #{toy}!"
@@ -6,19 +9,19 @@ class Puppy
   end
 
   def speak(int)
-  	int.times { puts "Woof!"}
+    int.times { puts "Woof!"}
   end
 
   def roll_over
-  	puts "*rolls over*"
+    puts "*rolls over*"
   end
 
   def dog_years(age)
-  	age / 7
+    age / 7
   end
 
   def hi_five
-  	puts "*Raises paw*"
+    puts "*Raises paw*"
   end
 
 end
