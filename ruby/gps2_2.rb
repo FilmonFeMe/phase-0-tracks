@@ -13,7 +13,7 @@
 # steps:
 	# add item to list as key
 	# add corresponding quantity as a value
-# output: boolean
+# output: hash
 
 # Method to remove an item from the list
 # input: list, item name
@@ -33,3 +33,26 @@
 	# ITERATE  through the hash and display the item name and item quantity
 # output: nil
 
+grocery_list = { } # initialize list
+
+def create_list( grocery_list, items)
+	item_array = items.split(" ")
+	item_array.each { |item| grocery_list[item] = 1}
+	display_items(grocery_list)
+
+	grocery_list
+end
+# p grocery_list
+# items = "apple pizza cherry toiletries"
+# create_list(grocery_list, items)
+# p grocery_list
+
+def add_item(grocery_list, item_name, quantity = 1)
+	grocery_list[item_name] = quantity
+end
+
+# item_name = "apple"
+# quantity = 5
+# p grocery_list
+# add_item(grocery_list, item_name, quantity)
+# p grocery_list
