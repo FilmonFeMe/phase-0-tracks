@@ -50,14 +50,14 @@ def create_list( grocery_list, items)
 
   grocery_list
 end
-p grocery_list
-items = "apple pizza cherry toiletries"
-create_list(grocery_list, items)
-p grocery_list
+# grocery_listp grocery_list
+# items = "apple pizza cherry toiletries"
+# create_list(grocery_list, items)
+# p 
 
-# def add_item(grocery_list, item_name, quantity = 1)
-# 	grocery_list[item_name] = quantity
-# end
+def add_item(grocery_list, item_name, quantity = 1)
+	grocery_list[item_name] = quantity
+end
 
 # item_name = "apple"
 # quantity = 5
@@ -73,6 +73,35 @@ def update_quantity(grocery_list, item_name, quantity)
   grocery_list[item_name] = quantity
 end
 
-update_quantity(grocery_list, "apple", 150000)
-p grocery_list
+# update_quantity(grocery_list, "apple", 150000)
+# p grocery_list
+# display_items(grocery_list)
+
+#DRIVER CODE
+puts "What will you buy?"
+buy_items = gets.chomp
+create_list(grocery_list, buy_items)
+
+puts "Anything else? (Type none if done)."
+else_item = gets.chomp 
+unless else_item == "none" 
+	add_item(grocery_list, else_item)
+end
+display_items(grocery_list) 
+
+puts "Would you like to update the quantities for these items? If so, type the item and the quantity. If no, type 0."
+new_quantity = gets.chomp.split(" ")
+unless new_quantity[0] == "0" || !grocery_list.has_key?(new_quantity[0])
+	update_quantity(grocery_list, new_quantity[0], new_quantity[1])
+end
+
 display_items(grocery_list)
+puts "\nAre you sure about all of this? If you'd like to remove an item, please type it. If not, type no."
+items_remove = gets.chomp 
+
+unless items_remove == "no" || !grocery_list.has_key?(items_remove)
+	remove_item(grocery_list, items_remove)
+end
+
+display_items(grocery_list)
+
