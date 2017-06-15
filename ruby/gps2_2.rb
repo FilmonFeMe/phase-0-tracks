@@ -105,3 +105,35 @@ end
 
 display_items(grocery_list)
 
+#Reflection
+#=========
+#What did you learn about pseudocode from working on this challenge?
+#	# It's important to use general language when pseudocoding. Good and 
+#	# clear pseudocode makes writing a #program very easy.
+#What are the tradeoffs of using arrays and hashes for this challenge?
+#	#Hashes are better for data with keys and values, and arrays are 
+#	#better for data or lists in #order.
+#What does a method return?
+#	#The method returns whatever is put last in the method  or whatever 
+#	#is using the return keyword.       
+#What kind of things can you pass into methods as arguments?
+	#  We can pass variables, numbers,  methods, and ruby objects(String, Integers, Float etc.)
+#How can you pass information between methods?
+#         #  We can store the return value of one method and pass this as an argument to the other method.
+#What concepts were solidified in this challenge, and what concepts are still confusing?
+#         # Methods returns were confusing before this challenge, but solidified during. 
+#	#Good, clear pseudocoding and communication can make for good coding. Adding keys and values to a
+#	#hash was confusing, but became clear in this challenge.
+
+
+
+
+
+
+
+
+
+
+
+
+
