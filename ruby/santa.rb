@@ -28,6 +28,10 @@ class Santa
     @reindeer_ranking.delete(reindeer_name)
     @reindeer_ranking << reindeer_name
   end
+
+  def gender=(new_gender)
+    @gender = new_gender
+  end
 end
 
 # dasher = Santa.new
@@ -59,8 +63,11 @@ end
 # end
 
 # puts "After calling celebrate_birthday :"
-# puts "age = #{santas[0].celebrate_birthday}" 
-# puts 
+# puts "age = #{santas[0].celebrate_birthday}"
+# puts
 # puts "After calling method get_mad_at :"
 # p santas[0].get_mad_at("Dasher")
+
+puts "After calling gender setter method :"
+puts "gender = #{santas[0].gender = "male"}"
 
