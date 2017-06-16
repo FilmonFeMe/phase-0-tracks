@@ -5,7 +5,7 @@
 # Instantiate a Santa object
 
 class Santa
-	attr_accessor  :age, :gender, :ethnicity
+  attr_accessor  :age, :gender, :ethnicity
   def initialize(gender, ethnicity)
     #puts "Initializing Santa instance ..."
     @gender, @ethnicity = gender, ethnicity
@@ -47,12 +47,29 @@ end
 
 # Driver code
 #==========
-santas = []
+
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
+puts "How many Santas do you want?"
+santa_number = gets.chomp.to_i
+santa_number.times do 
+  gender_index = rand(6)
+  ethnicity_index = rand(6)
+  santa = Santa.new(example_genders[gender_index], example_ethnicities[ethnicity_index])
+  age = 0 + rand(140)
+  santa.age = age
+  
+  puts "\nThis  Santa has the following attributes: "
+  puts "Age : #{santa.age}"
+  puts "Gender : #{santa.gender}"
+  puts "Ethnicity : #{santa.ethnicity}"
+
 end
+
+
+
+
+
 
 # puts "Testing the first two Santa instance in the array to make sure they are created "
 # 2.times do |index|
