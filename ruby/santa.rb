@@ -32,6 +32,14 @@ class Santa
   def gender=(new_gender)
     @gender = new_gender
   end
+
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
 end
 
 # dasher = Santa.new
@@ -68,6 +76,10 @@ end
 # puts "After calling method get_mad_at :"
 # p santas[0].get_mad_at("Dasher")
 
-puts "After calling gender setter method :"
-puts "gender = #{santas[0].gender = "male"}"
+# puts "After calling gender setter method :"
+# puts "gender = #{santas[0].gender = "male"}"
 
+puts "After calling age getter method :"
+puts "age = #{santas[0].age}"
+puts "After calling ethnicity getter method :"
+puts "ethnicity = #{santas[0].ethnicity}"
