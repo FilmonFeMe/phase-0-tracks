@@ -5,6 +5,7 @@
 # Instantiate a Santa object
 
 class Santa
+	attr_accessor  :age, :gender, :ethnicity
   def initialize(gender, ethnicity)
     #puts "Initializing Santa instance ..."
     @gender, @ethnicity = gender, ethnicity
@@ -27,18 +28,6 @@ class Santa
   def get_mad_at(reindeer_name)
     @reindeer_ranking.delete(reindeer_name)
     @reindeer_ranking << reindeer_name
-  end
-
-  def gender=(new_gender)
-    @gender = new_gender
-  end
-
-  def age
-    @age
-  end
-
-  def ethnicity
-    @ethnicity
   end
 end
 
@@ -79,7 +68,7 @@ end
 # puts "After calling gender setter method :"
 # puts "gender = #{santas[0].gender = "male"}"
 
-puts "After calling age getter method :"
-puts "age = #{santas[0].age}"
-puts "After calling ethnicity getter method :"
-puts "ethnicity = #{santas[0].ethnicity}"
+# puts "After calling age getter method :"
+# puts "age = #{santas[0].age}"
+# puts "After calling ethnicity getter method :"
+# puts "ethnicity = #{santas[0].ethnicity}"
