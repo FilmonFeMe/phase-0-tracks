@@ -31,8 +31,7 @@
 #	#define driver code
 
 class WordGuess
-  attr_accessor :attempt_number, :secret_word
-  attr_accessor :guessed_word
+  attr_accessor :attempt_number, :secret_word, :guessed_word
   attr_writer :guessed_letter
 
   def initialize
