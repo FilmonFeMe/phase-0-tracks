@@ -57,6 +57,11 @@ class WordGuess
   end
 
   def valid_letter?
+    if "abcdefghijklmnopqrstuvwxyz".include?(@guessed_letter) && @secret_word.include?(@guessed_letter)
+      true
+    else
+      false
+    end
 
   end
 end

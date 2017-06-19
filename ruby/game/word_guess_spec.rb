@@ -19,4 +19,10 @@ describe WordGuess do
     expect(game.guessed_word).to eq  ["_", "_", "_", "_", "_", "_", "_"]
   end
 
+  it "can create a place holder of underscore strings" do
+    game.secret_word = ["u", "n", "i", "c", "o", "r", "n"]
+    game.guessed_letter = "c"
+    expect(game.valid_letter?).to be true
+  end
+
 end
