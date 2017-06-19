@@ -62,6 +62,55 @@ class WordGuess
     else
       false
     end
+  end
+end
 
+#Driver Code
+#=========
+game = WordGuess.new
+puts "\nFirst player, please provide a secret word: "
+game.secret_word = gets.chomp.downcase
+#Start game is invoked
+game.start_game
+
+game_difficulty_level = 1 #set a default easy game difficulty level
+while !game_difficulty_level.is_a?(Integer)
+  puts "\nSecond player, please select game difficulty level ( type 1 for easy, 2 for intermediate or 3 for hard)."
+  game_difficulty_level = gets.chomp.to_i
+end
+
+# Select game difficulty level
+case game_difficulty_level
+when 1
+  max_attempts = game.secret_word.uniq.length * 3
+when 2
+  max_attempts = game.secret_word.uniq.length * 2
+when 3
+  max_attempts = game.secret_word.uniq.length * 1
+end
+
+puts "The word to be guessed has the following characters."
+puts game.guessed_word.join(" ")
+
+
+loop do
+  puts "You have #{max_attempts  - game.attempt_number} attempt(s) remaining."
+  puts "Please type any letter that you think is in the secret word."
+  game.guessed_letter = gets.chomp.downcase
+  if game.valid_letter?
+    game.update_guessed_word
+    puts "\nYour word is now : "
+  end
+
+  p game.guessed_word.join(" ")
+  game.attempt_number += 1
+  if game.guessed_word.join == game.secret_word.join && game.attempt_number <= max_attempts
+    puts "=========================="
+    puts "\nCongratulations ! You guessed the word in #{game.attempt_number} attempts. \nRe-run game to play again."
+    break
+  end
+  if game.attempt_number >= max_attempts
+    puts "\nSorry, you lost. You have reached the maximum number of attempts. \nRe-run game to play again."
+    break
   end
 end
