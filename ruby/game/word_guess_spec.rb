@@ -13,4 +13,10 @@ describe WordGuess do
     expect(game.update_guessed_word[3]).to eq  "c"
   end
 
+  it "can create a place holder of underscore strings" do
+    game.secret_word = ["u", "n", "i", "c", "o", "r", "n"]
+    game.guessed_word =Array.new(game.secret_word.length, "_" )
+    expect(game.guessed_word).to eq  ["_", "_", "_", "_", "_", "_", "_"]
+  end
+
 end
