@@ -32,9 +32,9 @@
 
 class WordGuess
   attr_accessor :attempt_number, :secret_word
-  attr_reader :guessed_word
+  attr_accessor :guessed_word
   attr_writer :guessed_letter
-  
+
   def initialize
     @secret_word = ""
     @guessed_letter = ""
@@ -47,10 +47,14 @@ class WordGuess
   end
 
   def update_guessed_word
-
+    @secret_word.map.with_index do  |letter, index|
+      if letter == @guessed_letter
+        @guessed_word[index] = @guessed_letter
+      end
+    end
   end
 
-  def valid_letter?
+    def valid_letter?
 
+    end
   end
-end

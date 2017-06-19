@@ -6,4 +6,11 @@ describe WordGuess do
     expect(game.attempt_number).to eq 0
   end
 
+  it "can update a letter to guessed word" do
+    game.secret_word = ["u", "n", "i", "c", "o", "r", "n"]
+    game.guessed_word =Array.new(game.secret_word.length, "_" )
+    game.guessed_letter = "c"
+    expect(game.update_guessed_word[3]).to eq  "c"
+  end
+
 end
