@@ -43,7 +43,9 @@ class WordGuess
   end
 
   def start_game
-    
+    secret_word_length = @secret_word.length
+    @guessed_word =Array.new(secret_word_length, "_" )
+    @secret_word = @secret_word.split("")
   end
 
   def update_guessed_word
