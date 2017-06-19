@@ -38,12 +38,12 @@ class WordGuess
   def initialize
     @secret_word = ""
     @guessed_letter = ""
-    @guessed_word = ""
+    @guessed_word = []
     @attempt_number = 0
   end
 
   def start_game
-
+    
   end
 
   def update_guessed_word
@@ -54,7 +54,7 @@ class WordGuess
     end
   end
 
-    def valid_letter?
+  def valid_letter?
 
-    end
   end
+end
