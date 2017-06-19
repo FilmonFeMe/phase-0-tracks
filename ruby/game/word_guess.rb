@@ -1,5 +1,5 @@
 #Word Guess Game
-#Psedocode 
+#Psedocode
 #===============
 
 #create a class for the game
@@ -12,11 +12,11 @@
 #		#input:
 #		#steps:
 #			# FOR each of secret word array letters
-#				# IF letter equals guessed letter 
+#				# IF letter equals guessed letter
 #					#SET guessed word value at index of letter in secret word to guessed letter
 #		#output: guessed word
 #	# define valid_letter? method
-#		#input: 
+#		#input:
 #		#steps:
 #			# IF guessed letter is an English alphabet AND included in secret word
 #				-return true
@@ -29,3 +29,28 @@
 # 	# define SETTER method for the guessed letter instance variable
 
 #	#define driver code
+
+class WordGuess
+  attr_accessor :attempt_number, :secret_word
+  attr_reader :guessed_word
+  attr_writer :guessed_letter
+  
+  def initialize
+    @secret_word = ""
+    @guessed_letter = ""
+    @guessed_word = ""
+    @attempt_number = 0
+  end
+
+  def start_game
+
+  end
+
+  def update_guessed_word
+
+  end
+
+  def valid_letter?
+
+  end
+end
