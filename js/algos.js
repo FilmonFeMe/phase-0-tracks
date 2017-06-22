@@ -18,15 +18,11 @@
 function longestPhrase(phrase) {
     var phraseSize = phrase.length;
     if (phraseSize > 0) {
-        var longestPhrase = phrase[0];
-        for (var i = 1; i < phraseSize; i++) {
-            if (phrase[i] !== null && phrase[i] !== undefined) {
-                if (longestPhrase.length < phrase[i].length) {
-                    longestPhrase = phrase[i];
-                }
-
+        var longestPhrase = "";
+        for (var i = 0; i < phraseSize; i++) {
+            if (typeof phrase[i] === "string" && longestPhrase.length < phrase[i].length) {
+                longestPhrase = phrase[i];
             }
-
         }
         return longestPhrase;
     } else {
@@ -39,8 +35,8 @@ var stringArray = ["long phrase", "longest phrase", "longer phrase"];
 console.log("The longest phrase is :");
 console.log(longestPhrase(stringArray));
 
-//another example
+//another example, null or undefined values are skipped
 console.log("-------------");
-var fruits = ["Orange", "Apple", "Banana", "Grape", "Avocado", "Cherry", undefined];
+var fruits = [undefined, "Orange", "Apple", "Banana", "Grape", "Avocado", "Cherry"];
 console.log("The longest phrase is :");
 console.log(longestPhrase(fruits));
