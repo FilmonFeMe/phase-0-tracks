@@ -14,18 +14,19 @@
 //				// update longestString to the string in the array at the current location
 //	//otherwise display to provide a valid input array with phrases in it
 // output : String 
-// if (phrase[0] !== null) {
-
-//         }
 
 function longestPhrase(phrase) {
     var phraseSize = phrase.length;
     if (phraseSize > 0) {
         var longestPhrase = phrase[0];
         for (var i = 1; i < phraseSize; i++) {
-            if (longestPhrase.length < phrase[i].length) {
-                longestPhrase = phrase[i];
+            if (phrase[i] !== null && phrase[i] !== undefined) {
+                if (longestPhrase.length < phrase[i].length) {
+                    longestPhrase = phrase[i];
+                }
+
             }
+
         }
         return longestPhrase;
     } else {
@@ -40,6 +41,6 @@ console.log(longestPhrase(stringArray));
 
 //another example
 console.log("-------------");
-var fruits = ["Orange", "Apple", "Banana", "Grape", "Avocado", "Cherry"];
+var fruits = ["Orange", "Apple", "Banana", "Grape", "Avocado", "Cherry", undefined];
 console.log("The longest phrase is :");
 console.log(longestPhrase(fruits));
