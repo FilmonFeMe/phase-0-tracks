@@ -6,13 +6,13 @@
 // create a function
 //input : Array of strings or phrases
 //steps:
-//	// IF array is not empty
-//		// declare a variable to store the first element in the array(longestString)
-//		// FOR each of the remaining elements in the array
-//			//find length of the element and compare it with the length of the longestString
-//			//IF length of longestString less than length of element at current position in the array
-//				// update longestString to the string in the array at the current location
-//	//otherwise display to provide a valid input array with phrases in it
+//  // IF array is not empty
+//      // declare a variable to store the first element in the array(longestString)
+//      // FOR each of the remaining elements in the array
+//          //find length of the element and compare it with the length of the longestString
+//          //IF length of longestString less than length of element at current position in the array
+//              // update longestString to the string in the array at the current location
+//  //otherwise display to provide a valid input array with phrases in it
 // output : String 
 
 function longestPhrase(phrase) {
@@ -31,12 +31,59 @@ function longestPhrase(phrase) {
 }
 
 // driver code
-var stringArray = ["long phrase", "longest phrase", "longer phrase"];
-console.log("The longest phrase is :");
-console.log(longestPhrase(stringArray));
+// var stringArray = ["long phrase", "longest phrase", "longer phrase"];
+// console.log("The longest phrase is :");
+// console.log(longestPhrase(stringArray));
 
-//another example, null or undefined values are skipped
-console.log("-------------");
-var fruits = [undefined, "Orange", "Apple", "Banana", "Grape", "Avocado", "Cherry"];
-console.log("The longest phrase is :");
-console.log(longestPhrase(fruits));
+// //another example, null or undefined values are skipped
+// console.log("-------------");
+// var fruits = [undefined, "Orange", "Apple", "Banana", "Grape", "Avocado", "Cherry"];
+// console.log("The longest phrase is :");
+// console.log(longestPhrase(fruits));
+
+// Find Key-Value Pair Match
+//=====================
+//Pseudo code
+//-----------------------------
+
+//create a function
+//input : two objects (firstObject and secondObject)
+// steps:
+//  //for each key in the firstObject 
+//      // for each key in the secondObject
+//          // if key of firstObject equals key of second object 
+//              // if value of the key of the firstObject equals value of the secondObject
+//                  // RETURN true 
+// output :boolean
+
+function keyValueMatch(firstObject, secondObject) {
+    if (firstObject instanceof Object && secondObject instanceof Object) {
+        var firstObjKeys = Object.keys(firstObject);
+        var secondObjKeys = Object.keys(secondObject);
+
+        for (var i = 0; i < firstObjKeys.length; i++) {
+            for (var j = 0; j < secondObjKeys.length; j++) {
+                if (firstObjKeys[i] == secondObjKeys[j] && firstObject[firstObjKeys[i]] == secondObject[secondObjKeys[j]]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    } else {
+        console.log("Either or both are not objects.");
+    }
+}
+
+var firstPerson = { 'name': "Steven", age: 54 };
+var secondPerson = { name: "Tamir", age: 54 };
+console.log(keyValueMatch(firstPerson, secondPerson));
+console.log("---------------------------------------------------");
+
+var firstAnimal = { 'animal': "Dog", legs: 4 };
+var secondAnimal = { animal: "cat", legs: 3 };
+console.log(keyValueMatch(firstAnimal, secondAnimal));
+
+console.log("---------------------------------------------------");
+var firstObj = 2;
+var secondObj = 15;
+console.log(keyValueMatch(firstObj, secondObj));
