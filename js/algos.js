@@ -1,8 +1,7 @@
 // Longest Phrase
 //===============
 /*Pseudo code
------------------------
-
+------------------
 create a function
 input : Array of strings or phrases
 steps:
@@ -13,8 +12,9 @@ steps:
          IF length of longestString less than length of element at current position in the array
              update longestString to the string in the array at the current location
  otherwise display to provide a valid input array with phrases in it
-output : String 
+output : String  
 */
+
 function longestPhrase(phrase) {
     var phraseSize = phrase.length;
     if (phraseSize > 0) {
@@ -36,7 +36,8 @@ var stringArray = ["long phrase", "longest phrase", "longer phrase"];
 console.log("The longest phrase is :");
 console.log(longestPhrase(stringArray));
 
-//another example, null or undefined values are skipped
+another example, null or undefined values are skipped
+
 console.log("-------------");
 var fruits = [undefined, "Orange", "Apple", "Banana", "Grape", "Avocado", "Cherry"];
 console.log("The longest phrase is :");
@@ -46,15 +47,15 @@ console.log(longestPhrase(fruits));
 //========================
 /*Pseudo code
 -----------------------------
-
 create a function
 input : two objects (firstObject and secondObject)
 steps:
- //for each key in the firstObject 
-     // for each key in the secondObject
-         // if key of firstObject equals key of second object 
-             // if value of the key of the firstObject equals value of the secondObject
-                 // RETURN true 
+ for each key in the firstObject 
+     for each key in the secondObject
+         if key of firstObject equals key of second object 
+             if value of the key of the firstObject equals value of the secondObject
+                 RETURN true 
+
 output :boolean
 */
 function keyValueMatch(firstObject, secondObject) {
@@ -75,7 +76,9 @@ function keyValueMatch(firstObject, secondObject) {
     }
 }
 
-/*var firstPerson = { 'name': "Steven", age: 54 };
+/*
+var firstPerson = { 'name': "Steven", age: 54 };
+
 var secondPerson = { name: "Tamir", age: 54 };
 console.log(keyValueMatch(firstPerson, secondPerson));
 console.log("---------------------------------------------------");
@@ -89,24 +92,26 @@ var firstObj = 2;
 var secondObj = 15;
 console.log(keyValueMatch(firstObj, secondObj));
 */
-/* Generate Random Test Data
-----------------------------------------------
-Pseudo code
+
+// Generate Random Test Data
+//----------------------------------------------
+/*Pseudo code
 ------------------------------------------------
 create a function to generate an array of strings
- input : integer
+input : integer
 steps:
-   create an empty string array of size equal to the input integer
-   for each element of the array
-       generate a random number between 1 and 10 for the length of the string(lengthOfWord) 
-      for each i = 0 and i < lengthOfWord
-           generate a random alphabet 'a' to 'z' 
-           concatenate to the word 
-           update i to i + 1
-       end loop
-   end loop
- output: Array of strings 
+ create an empty string array of size equal to the input integer
+ for each element of the array
+     generate a random number between 1 and 10 for the length of the string(lengthOfWord) 
+     for each i = 0 and i < lengthOfWord
+         generate a random alphabet 'a' to 'z' 
+         concatenate to the word 
+         update i to i + 1
+     end loop
+ end loop
+output: Array of strings
 */
+
 function generateTestData(numberOfWords) {
     if (Number.isInteger(numberOfWords)) {
         var strings = new Array(numberOfWords).fill("");
