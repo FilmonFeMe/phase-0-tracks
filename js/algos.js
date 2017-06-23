@@ -1,7 +1,7 @@
 // Longest Phrase
 //===============
 //Pseudo code
-//-----------------------------
+//--------------------------
 
 // create a function
 //input : Array of strings or phrases
@@ -30,7 +30,8 @@ function longestPhrase(phrase) {
     }
 }
 
-// driver code
+// test code for longestPhrase function
+//-------------------------------------------------------------
 // var stringArray = ["long phrase", "longest phrase", "longer phrase"];
 // console.log("The longest phrase is :");
 // console.log(longestPhrase(stringArray));
@@ -42,7 +43,7 @@ function longestPhrase(phrase) {
 // console.log(longestPhrase(fruits));
 
 // Find Key-Value Pair Match
-//=====================
+//========================
 //Pseudo code
 //-----------------------------
 
