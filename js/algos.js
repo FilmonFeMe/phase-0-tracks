@@ -74,16 +74,54 @@ function keyValueMatch(firstObject, secondObject) {
     }
 }
 
-var firstPerson = { 'name': "Steven", age: 54 };
-var secondPerson = { name: "Tamir", age: 54 };
-console.log(keyValueMatch(firstPerson, secondPerson));
-console.log("---------------------------------------------------");
+// var firstPerson = { 'name': "Steven", age: 54 };
+// var secondPerson = { name: "Tamir", age: 54 };
+// console.log(keyValueMatch(firstPerson, secondPerson));
+// console.log("---------------------------------------------------");
 
-var firstAnimal = { 'animal': "Dog", legs: 4 };
-var secondAnimal = { animal: "cat", legs: 3 };
-console.log(keyValueMatch(firstAnimal, secondAnimal));
+// var firstAnimal = { 'animal': "Dog", legs: 4 };
+// var secondAnimal = { animal: "cat", legs: 3 };
+// console.log(keyValueMatch(firstAnimal, secondAnimal));
 
-console.log("---------------------------------------------------");
-var firstObj = 2;
-var secondObj = 15;
-console.log(keyValueMatch(firstObj, secondObj));
+// console.log("---------------------------------------------------");
+// var firstObj = 2;
+// var secondObj = 15;
+// console.log(keyValueMatch(firstObj, secondObj));
+
+// Generate Random Test Data
+//----------------------------------------------
+//Pseudo code
+//------------------------------------------------
+//create a function to generate an array of strings
+// input : integer
+//steps:
+//  // create an empty string array of size equal to the input integer
+//  // for each element of the array
+//      // generate a random number between 1 and 10 for the length of the string(lengthOfWord) 
+//      //for each i = 0 and i < lengthOfWord
+//          // generate a random alphabet 'a' to 'z' 
+//          // concatenate to the word 
+//          // update i to i + 1
+//      // end loop
+//  // end loop
+// output: Array of strings
+
+function generateTestData(numberOfWords) {
+    if (Number.isInteger(numberOfWords)) {
+        var strings = new Array(numberOfWords).fill("");
+        var alphabets = "abcdefghijklmnopqrstuvwxyz";
+        for (var i = 0; i < numberOfWords; i++) {
+            var lengthOfWord = 1 + Math.floor(Math.random() * 10);
+            var j = 0;
+            do {
+                strings[i] += alphabets[Math.floor(Math.random() * 26)];
+                j++;
+            } while (j < lengthOfWord);
+        }
+        return strings;
+    }
+}
+
+
+// var num = 3;
+// console.log(generateTestdata(num));
