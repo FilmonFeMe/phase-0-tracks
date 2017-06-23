@@ -125,3 +125,21 @@ function generateTestData(numberOfWords) {
 
 // var num = 3;
 // console.log(generateTestdata(num));
+
+
+//===========================================
+// Driver Code
+//===========================================
+for (var i = 0; i < 10; i++) {
+    var numberOfWords = 3 + Math.floor(Math.random() * 10); // generate 3 to 10 random words
+    var arrayOfWords = generateTestdata(numberOfWords);
+    var longestString = longestPhrase(arrayOfWords);
+    console.log("The phrases are: ");
+    console.log(arrayOfWords);
+    console.log();
+    console.log("The longest phrase is: ");
+    console.log(longestString);
+    console.log("--------------------------------------");
+    console.log();
+}
+
