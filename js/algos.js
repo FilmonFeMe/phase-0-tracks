@@ -1,8 +1,7 @@
 // Longest Phrase
 //===============
 /*Pseudo code
-----------------------
-
+------------------
 create a function
 input : Array of strings or phrases
 steps:
@@ -13,7 +12,8 @@ steps:
          IF length of longestString less than length of element at current position in the array
              update longestString to the string in the array at the current location
  otherwise display to provide a valid input array with phrases in it
-output : String  */
+output : String  
+*/
 
 function longestPhrase(phrase) {
     var phraseSize = phrase.length;
@@ -37,6 +37,7 @@ console.log("The longest phrase is :");
 console.log(longestPhrase(stringArray));
 
 another example, null or undefined values are skipped
+
 console.log("-------------");
 var fruits = [undefined, "Orange", "Apple", "Banana", "Grape", "Avocado", "Cherry"];
 console.log("The longest phrase is :");
@@ -54,6 +55,7 @@ steps:
          if key of firstObject equals key of second object 
              if value of the key of the firstObject equals value of the secondObject
                  RETURN true 
+
 output :boolean
 */
 function keyValueMatch(firstObject, secondObject) {
@@ -73,8 +75,10 @@ function keyValueMatch(firstObject, secondObject) {
         console.log("Either or both are not objects.");
     }
 }
+
 /*
 var firstPerson = { 'name': "Steven", age: 54 };
+
 var secondPerson = { name: "Tamir", age: 54 };
 console.log(keyValueMatch(firstPerson, secondPerson));
 console.log("---------------------------------------------------");
@@ -88,6 +92,7 @@ var firstObj = 2;
 var secondObj = 15;
 console.log(keyValueMatch(firstObj, secondObj));
 */
+
 // Generate Random Test Data
 //----------------------------------------------
 /*Pseudo code
@@ -106,6 +111,7 @@ steps:
  end loop
 output: Array of strings
 */
+
 function generateTestData(numberOfWords) {
     if (Number.isInteger(numberOfWords)) {
         var strings = new Array(numberOfWords).fill("");
