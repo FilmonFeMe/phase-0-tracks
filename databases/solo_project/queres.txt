@@ -1,0 +1,119 @@
+
+1. Display the information in one table.
+SELECT * FROM books;
+
+1|Harry Potter and the Philosopher's Stone|J.K. Rowling|1997|true|1
+2|Harry Potter and the Chamber of Secrets|J.K. Rowling|1998|false|1
+3|Harry Potter and the Prisoner of Azkaban|J.K. Rowling|1999|false|1
+4|Harry Potter and the Goblet of Fire|J.K. Rowling|2000|false|1
+5|Harry Potter and the Order of the Phoenix|J.K. Rowling|2003|false|1
+6|Harry Potter and the Half-Blood Prince|J.K. Rowling|2005|true|1
+7|Harry Potter and the Deathly hallows|J.K. Rowling|2007|true|1
+8|A Brief History of Time|Stephen Hawking|1988|false|2
+9|The Universe in a Nushell|Stephen Hawking|2001|true|2
+10|Frankenstein|Mary Shelley|1818|true|3
+11|The Martian|Andy Weir|2014|false|4
+12|Ready Player One|Ernest Cline|2011|true|4
+13|Armada|Ernest Cline|2015|false|4
+14|Pride and Prejudice|Jane Austen|1813|true|5
+15|Emma|Jane Austen|1815|false|5
+
+2. 
+UPDATE books SET title = "The Universe in a Nutshell" WHERE id = 9;
+SELECT * FROM books WHERE id = 9;
+9|The Universe in a Nutshell|Stephen Hawking|2001|true|2
+
+3.
+SELECT * FROM books JOIN category ON books.category_id = category.id;
+
+1|Harry Potter and the Philosopher's Stone|J.K. Rowling|1997|true|1|1|Fantasy
+2|Harry Potter and the Chamber of Secrets|J.K. Rowling|1998|false|1|1|Fantasy
+3|Harry Potter and the Prisoner of Azkaban|J.K. Rowling|1999|false|1|1|Fantasy
+4|Harry Potter and the Goblet of Fire|J.K. Rowling|2000|false|1|1|Fantasy
+5|Harry Potter and the Order of the Phoenix|J.K. Rowling|2003|false|1|1|Fantasy
+6|Harry Potter and the Half-Blood Prince|J.K. Rowling|2005|true|1|1|Fantasy
+7|Harry Potter and the Deathly hallows|J.K. Rowling|2007|true|1|1|Fantasy
+8|A Brief History of Time|Stephen Hawking|1988|false|2|2|Non Fiction
+9|The Universe in a Nutshell|Stephen Hawking|2001|true|2|2|Non Fiction
+10|Frankenstein|Mary Shelley|1818|true|3|3|Horror
+11|The Martian|Andy Weir|2014|false|4|4|Science
+12|Ready Player One|Ernest Cline|2011|true|4|4|Science
+13|Armada|Ernest Cline|2015|false|4|4|Science
+14|Pride and Prejudice|Jane Austen|1813|true|5|5|Classic
+15|Emma|Jane Austen|1815|false|5|5|Classic
+
+4.
+SELECT title, author, genre FROM books, category WHERE books.category_id = category.id;
+
+Harry Potter and the Philosopher's Stone|J.K. Rowling|Fantasy
+Harry Potter and the Chamber of Secrets|J.K. Rowling|Fantasy
+Harry Potter and the Prisoner of Azkaban|J.K. Rowling|Fantasy
+Harry Potter and the Goblet of Fire|J.K. Rowling|Fantasy
+Harry Potter and the Order of the Phoenix|J.K. Rowling|Fantasy
+Harry Potter and the Half-Blood Prince|J.K. Rowling|Fantasy
+Harry Potter and the Deathly hallows|J.K. Rowling|Fantasy
+A Brief History of Time|Stephen Hawking|Non Fiction
+The Universe in a Nutshell|Stephen Hawking|Non Fiction
+Frankenstein|Mary Shelley|Horror
+The Martian|Andy Weir|Science
+Ready Player One|Ernest Cline|Science
+Armada|Ernest Cline|Science
+Pride and Prejudice|Jane Austen|Classic
+Emma|Jane Austen|Classic
+
+5. 
+
+ DELETE FROM books WHERE borrowed = "false" AND category_id = 5;
+SELECT * FROM books;
+
+1|Harry Potter and the Philosopher's Stone|J.K. Rowling|1997|true|1
+2|Harry Potter and the Chamber of Secrets|J.K. Rowling|1998|false|1
+3|Harry Potter and the Prisoner of Azkaban|J.K. Rowling|1999|false|1
+4|Harry Potter and the Goblet of Fire|J.K. Rowling|2000|false|1
+5|Harry Potter and the Order of the Phoenix|J.K. Rowling|2003|false|1
+6|Harry Potter and the Half-Blood Prince|J.K. Rowling|2005|true|1
+7|Harry Potter and the Deathly hallows|J.K. Rowling|2007|true|1
+8|A Brief History of Time|Stephen Hawking|1988|false|2
+9|The Universe in a Nutshell|Stephen Hawking|2001|true|2
+10|Frankenstein|Mary Shelley|1818|true|3
+11|The Martian|Andy Weir|2014|false|4
+12|Ready Player One|Ernest Cline|2011|true|4
+13|Armada|Ernest Cline|2015|false|4
+14|Pride and Prejudice|Jane Austen|1813|true|5
+
+SELECT title, author, genre FROM books JOIN category ON books.category_id = category.id;
+
+Harry Potter and the Philosopher's Stone|J.K. Rowling|Fantasy
+Harry Potter and the Chamber of Secrets|J.K. Rowling|Fantasy
+Harry Potter and the Prisoner of Azkaban|J.K. Rowling|Fantasy
+Harry Potter and the Goblet of Fire|J.K. Rowling|Fantasy
+Harry Potter and the Order of the Phoenix|J.K. Rowling|Fantasy
+Harry Potter and the Half-Blood Prince|J.K. Rowling|Fantasy
+Harry Potter and the Deathly hallows|J.K. Rowling|Fantasy
+A Brief History of Time|Stephen Hawking|Non Fiction
+The Universe in a Nutshell|Stephen Hawking|Non Fiction
+Frankenstein|Mary Shelley|Horror
+The Martian|Andy Weir|Science
+Ready Player One|Ernest Cline|Science
+Armada|Ernest Cline|Science
+Pride and Prejudice|Jane Austen|Classic
+
+SELECT title, author, genre FROM books LEFT JOIN category ON books.category_id = category.id;
+
+Harry Potter and the Philosopher's Stone|J.K. Rowling|Fantasy
+Harry Potter and the Chamber of Secrets|J.K. Rowling|Fantasy
+Harry Potter and the Prisoner of Azkaban|J.K. Rowling|Fantasy
+Harry Potter and the Goblet of Fire|J.K. Rowling|Fantasy
+Harry Potter and the Order of the Phoenix|J.K. Rowling|Fantasy
+Harry Potter and the Half-Blood Prince|J.K. Rowling|Fantasy
+Harry Potter and the Deathly hallows|J.K. Rowling|Fantasy
+A Brief History of Time|Stephen Hawking|Non Fiction
+The Universe in a Nutshell|Stephen Hawking|Non Fiction
+Frankenstein|Mary Shelley|Horror
+The Martian|Andy Weir|Science
+Ready Player One|Ernest Cline|Science
+Armada|Ernest Cline|Science
+Pride and Prejudice|Jane Austen|Classic
+
+
+
