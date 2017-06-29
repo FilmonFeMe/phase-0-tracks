@@ -1,0 +1,16 @@
+
+CREATE TABLE businesses (
+   ...> id INTEGER PRIMARY KEY,
+   ...> name VARCHAR(255)
+   ...> );
+
+CREATE TABLE users (
+   ...> id INTEGER PRIMARY KEY,
+   ...> first_name VARCHAR(255),
+   ...> last_name VARCHAR(255)
+   ...> );
+
+INSERT INTO businesses (name) VALUES ("Grundy Hollow Wedding Chapel"), ("Amir's Towing"), ("The Beagle Nightclub");
+
+INSERT INTO users (first_name, last_name) VALUES ("Bradford", "Pitt"),("Mandy", “Kaling"),("Angela", "Jolie");
+
