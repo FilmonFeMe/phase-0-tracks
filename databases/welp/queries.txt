@@ -1,0 +1,68 @@
+
+/Schema /
+
+.schema
+CREATE TABLE businesses (
+id INTEGER PRIMARY KEY,
+name VARCHAR(255)
+);
+CREATE TABLE users (
+id INTEGER PRIMARY KEY,
+first_name VARCHAR(255),
+last_name VARCHAR(255)
+);
+CREATE TABLE reviews (
+id INTEGER PRIMARY KEY,
+stars INT,
+comment VARCHAR(255),
+business_id INT,
+user_id INT,
+FOREIGN KEY (business_id) REFERENCES business (id),
+FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+INSERT INTO businesses (name) VALUES ("Grundy Hollow Wedding Chapel"), ("Amir's Towing"), ("The Beagle Nightclub");
+
+INSERT INTO users (first_name, last_name) VALUES ("Bradford", "Pitt"),("Mandy", “Kaling"),("Angela", "Jolie");
+
+CREATE TABLE reviews (
+   ...> id INTEGER PRIMARY KEY,
+   ...> stars INT,
+   ...> comment VARCHAR(255),
+   ...> business_id INT,
+   ...> user_id INT,
+   ...> FOREIGN KEY (business_id) REFERENCES business(id),
+   ...> FOREIGN KEY (user_id) REFERENCES users(id)
+   ...> );
+
+SELECT * FROM reviews;
+
+1|3|so so|1|1
+2|5|so goooooooood|2|2
+3|1|ew|3|3
+sqlite> 
+
+
+/Joined three tables and selected all columns/
+
+SELECT * FROM users JOIN businesses ON users.id =  businesses.id JOIN reviews ON reviews.business_id = businesses.id;
+
+1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel|1|3|so so|1|1
+2|Mandy|Kaling|2|Amir's Towing|2|5|so goooooooood|2|2
+3|Angela|Jolie|3|The Beagle Nightclub|3|1|ew|3|3
+
+/ JOIN three tables for some columns avoiding data repetition/
+
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users JOIN businesses ON users.id =  businesses.id JOIN reviews ON reviews.business_id = businesses.id;
+
+
+Bradford|Pitt|Grundy Hollow Wedding Chapel|3|so so
+Mandy|Kaling|Amir's Towing|5|so goooooooood
+Angela|Jolie|The Beagle Nightclub|1|ew
+
+/JOIN three tables and select a particular business/
+
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users JOIN businesses ON users.id =  businesses.id JOIN reviews ON reviews.business_id = businesses.id WHERE businesses.id = 3;
+
+Angela|Jolie|The Beagle Nightclub|1|ew
