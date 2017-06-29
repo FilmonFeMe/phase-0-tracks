@@ -1,14 +1,26 @@
 
-CREATE TABLE businesses (
-   ...> id INTEGER PRIMARY KEY,
-   ...> name VARCHAR(255)
-   ...> );
+/Schema /
 
+.schema
+CREATE TABLE businesses (
+id INTEGER PRIMARY KEY,
+name VARCHAR(255)
+);
 CREATE TABLE users (
-   ...> id INTEGER PRIMARY KEY,
-   ...> first_name VARCHAR(255),
-   ...> last_name VARCHAR(255)
-   ...> );
+id INTEGER PRIMARY KEY,
+first_name VARCHAR(255),
+last_name VARCHAR(255)
+);
+CREATE TABLE reviews (
+id INTEGER PRIMARY KEY,
+stars INT,
+comment VARCHAR(255),
+business_id INT,
+user_id INT,
+FOREIGN KEY (business_id) REFERENCES business (id),
+FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
 
 INSERT INTO businesses (name) VALUES ("Grundy Hollow Wedding Chapel"), ("Amir's Towing"), ("The Beagle Nightclub");
 
