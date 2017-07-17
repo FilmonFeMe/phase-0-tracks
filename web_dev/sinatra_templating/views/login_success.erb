@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log in Success</title>
+</head>
+<body>
+  <h1>Log in Success</h1>
+  <p>You have created an account successfully!</p>
+  <br>
+  <p>Your user details are: </p>
+  <p>Name: <%= @users[-1]['name'] %></p>
+  <p>Email: <%= @users[-1]['email'] %></p>
+  <p>Password: <%= @users[-1]['password'] %></p>
+  <br>
+  <a href="/user">Home</a>
+</body>
+</html>
