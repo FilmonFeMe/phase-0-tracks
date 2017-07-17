@@ -63,3 +63,9 @@ get '/great_job/:name' do
   end
 end
 
+get '/sum/:num_1/:num_2' do 
+
+   "#{params[:num_1].to_i + params[:num_2].to_i}"
+end
+
+
