@@ -50,3 +50,16 @@ end
 get '/contact'  do
   "The address would be 1407 Kansas, San Francisco, CA 94107."
 end
+
+# write a GET route that takes a persons name and display some message
+
+get '/great_job/:name' do
+  student = db.execute("SELECT  * FROM students WHERE name=?", [params[:name]])[0]
+ 
+  if student
+    "Good job, #{student['name']}"
+  else
+    "Good job!!"
+  end
+end
+
